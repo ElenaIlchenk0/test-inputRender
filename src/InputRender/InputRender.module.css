@@ -1,0 +1,14 @@
+legend {
+    font-size: 28px;
+    margin: 20px 0 10px;
+}
+
+.input {
+    display: block;
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid rgb(223, 125, 4);
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+}

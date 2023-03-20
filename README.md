@@ -1,50 +1,46 @@
-# test-inputRender
+# Getting Started with Create React App
 
-Тестовое задание React
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Создать универсальный компонент для рендера любой группы полей согласно поддерживаемой переданной конфигурации.
+## Available Scripts
 
-Пример конфигурации:
+In the project directory, you can run:
 
-[
-{
-id: ‘first_name’,
-type: ‘inputText’,
-label: ‘First Name’,
-defaultValue: ‘Some first name’
-},
-{
-id: ‘last_name’,
-type: ‘inputText’,
-label: ‘Last Name’
-},
-{
-id: ‘email’,
-type: ‘inputEmail’,
-label: ‘Email’,
-required: true
-},
-{
-id: ‘password’,
-type: ‘inputPassword,
-label: ‘Password’,
-required: true
-},
-]
+### `npm start`
 
-Ключи id являются уникальными ключами полей. Рендер полей должен происходить в том порядке, в котором они указаны в объекте конфигурации. type может принимать значения ‘inputText’, (обычное текстовое поле) ‘inputEmail’ (текстовое поле с валидацией ввода email адреса), ‘inputPassword’ (текстовое поле со скрытыми реальными символами ввода). Необходимо предусмотреть единый метод у создаваемой компоненты для обработки изменения значения полей. В конечном итоге в месте использования данной компоненты необходимо иметь актуальные значения каждого из полей по их ключам вида:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-{
-‘first_name’: ‘Some first name’,
-‘last_name’: ‘Some last name’,
-‘email’: ’example@user.com’,
-‘password’: ‘123456’,
-}
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-где значения каждого ключа являются актуальными введенными пользователем данными. При наличии ключа defaultValue необходимо, чтобы предварительно в объекте актуальных значений оно уже было сформировано и отражено при рендере полей.
+### `npm test`
 
-Сами ключи, порядок и кол-во полей может быть разным в зависимости от кейса, пример конфигурации дан лишь в качестве одного из возможных кейсов.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-В тестовом задании необходимо использовать Typescript и показать использование данного созданного компонента на какой-нибудь странице, где будет предусмотрена кнопка ’Submit’, нажатие на которую будет доступно и соответствующе отражено визуально только при заполнении всех полей с ключами required. Сама кнопка не должна являться частью созданной выше компоненты для рендера полей, а должна быть добавлена только на самой странице.
+### `npm run build`
 
-Дизайн самих полей и страницы их использования отражены в приложенном изображении. В реализации структура полей должна соответствовать описанной в задании конфигурации
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
