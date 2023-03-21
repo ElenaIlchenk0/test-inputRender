@@ -22,12 +22,11 @@ function App() {
 
   return (
     <form onSubmit={(e) => submitHandler(e, values)} className={appStyles.form}>
+      <legend>Авторизация</legend>
       <InputRender
         inputsData={inputsData}
         values={values}
         onChangeHandler={handleChangeInput}
-        title='Авторизация'
-        subTitle=''
       />
       <button
         type="submit"

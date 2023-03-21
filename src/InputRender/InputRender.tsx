@@ -3,18 +3,14 @@ import inputRenderStyles from './InputRender.module.css';
 import { TInputsData } from '../utils/types/types'
 
 interface IInputRenderProps  {
-    title: string;
-    subTitle: string;
     onChangeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
     inputsData: TInputsData[];
     values: { [key: string]: string }
 }
 
-const InputRender: React.FC<IInputRenderProps> = ({ inputsData, onChangeHandler, values, title, subTitle }) => {
+const InputRender: React.FC<IInputRenderProps> = ({ inputsData, onChangeHandler, values }) => {
     return (
         <>
-            <legend>{title}</legend>
-            {subTitle && <p>{subTitle}</p>}
             {
                 inputsData &&
                 inputsData.map((input) => {
