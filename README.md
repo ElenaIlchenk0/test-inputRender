@@ -1,15 +1,15 @@
 
-# Тестовое задание React
+# React test task
+# InputRender component
   
-### Запуск проекта:
+### Run project:
 - `npm i`
 - `npm run start`
 
-### Задание
+### Requirements
+Create a universal component for rendering any group of inputs according to the supported configuration.
 
-Создать универсальный компонент для рендера любой группы полей согласно поддерживаемой переданной конфигурации.
-
-Пример конфигурации:
+Configuration example:
 
 `[
 {
@@ -37,7 +37,14 @@ required: true
 },
 ]`
 
-Ключи id являются уникальными ключами полей. Рендер полей должен происходить в том порядке, в котором они указаны в объекте конфигурации. type может принимать значения ‘inputText’, (обычное текстовое поле) ‘inputEmail’ (текстовое поле с валидацией ввода email адреса), ‘inputPassword’ (текстовое поле со скрытыми реальными символами ввода). Необходимо предусмотреть единый метод у создаваемой компоненты для обработки изменения значения полей. В конечном итоге в месте использования данной компоненты необходимо иметь актуальные значения каждого из полей по их ключам вида:
+The 'id' keys are unique field keys. Inputs must be rendered in the order in which they are specified in the configuration object.
+
+type can take the values:
+  - 'inputText' (for plain text field), 
+  - 'inputEmail' (for text field with email address validation), 
+  - 'inputPassword' (for text field with hidden real input characters). 
+
+It is necessary to provide a single method for the created component to handle changes in the value of fields. In the place where this component is used, it is necessary to have the actual values of each of the fields by their view keys:
 
 `{
 ‘first_name’: ‘Some first name’,
@@ -46,10 +53,14 @@ required: true
 ‘password’: ‘123456’,
 }`
 
-где значения каждого ключа являются актуальными введенными пользователем данными. При наличии ключа defaultValue необходимо, чтобы предварительно в объекте актуальных значений оно уже было сформировано и отражено при рендере полей.
+where the values of each key are the actual user-entered data. If there was a defaultValue key in configuration, it must first be formed in the object of actual values and displayed when rendering fields.
 
-Сами ключи, порядок и кол-во полей может быть разным в зависимости от кейса, пример конфигурации дан лишь в качестве одного из возможных кейсов.
+The keys, the order and number of штзгеы may be different depending on the case, the configuration example is given only as one of the possible cases.
 
-В тестовом задании необходимо использовать Typescript и показать использование данного созданного компонента на какой-нибудь странице, где будет предусмотрена кнопка ’Submit’, нажатие на которую будет доступно и соответствующе отражено визуально только при заполнении всех полей с ключами required. Сама кнопка не должна являться частью созданной выше компоненты для рендера полей, а должна быть добавлена только на самой странице.
+In the test task, you need to use Typescript and show the use of this created component on some page where the 'Submit' button will be provided, clicking on which will be available and visually reflected accordingly only when all fields with the required keys are filled. The button itself should not be part of the field render component created above, but should only be added on the page itself.
 
-Дизайн самих полей и страницы их использования отражены в приложенном изображении. В реализации структура полей должна соответствовать описанной в задании конфигурации
+The design of the fields themselves and the page of their use are reflected in the attached image. In the implementation, the structure of the fields must correspond to the one described in the configuration task
+
+In the test task, you need to use Typescript. It is necessary to show the usege of the created component on some page where the 'Submit' button will be provided. Clicking the button should be available and displayed visually only when all fields with required keys are filled. The button should not be part of the field render component created above, but should be added on the page itself.
+
+The design of the fields and the pages of their use are reflected in the attached image. In the implementation, the structure of the fields must correspond to the one described in the configuration task
