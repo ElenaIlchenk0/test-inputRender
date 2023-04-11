@@ -1,6 +1,5 @@
 import React from 'react';
 import { TInputsData } from '../types/types';
-import useFormStyles from './useForm.module.css';
 
 export const useForm = (data: TInputsData[]) => {
 

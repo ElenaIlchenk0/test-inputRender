@@ -15,9 +15,8 @@ function App() {
   }
 
   useEffect(() =>{
-    let required = inputsData.filter(el => el.required === true);
-    let emptyInputs = required.filter(item => (values[item.id] === ''));
-    setDisabled(emptyInputs.length > 0)
+    const requiredEmptyInputs = inputsData.filter(el => el.required === true && values[el.id] === '');
+    setDisabled(requiredEmptyInputs.length > 0)
   }, [values])
 
   return (
