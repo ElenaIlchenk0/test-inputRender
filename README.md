@@ -7,7 +7,7 @@
 - `npm run start`
 
 ### Requirements
-Create a universal component for rendering any group of inputs according to the supported configuration.
+Create a general component for rendering any group of inputs according to the supported configuration.
 
 Configuration example:
 
